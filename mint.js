@@ -5,16 +5,17 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 const ABI = require('./contract_abi.json');
 
-//Change these variables
+// Change these variables
+// ******
 const CONTRACT_ADDRESS = '0x7e6bc952d4b4bd814853301bee48e99891424de0'
+const MINT_PRICE = 0.07
+const MINT_QUANTITY = 1
+var MAX_PRIORITY_FEE = 100
+// ******
 
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 const nftContract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
-
-const MINT_PRICE = 0.07
-const MINT_QUANTITY = 1
-var MAX_PRIORITY_FEE = 100
 
 MAX_PRIORITY_FEE *= 1_000_000_000
 MAX_PRIORITY_FEE = MAX_PRIORITY_FEE
