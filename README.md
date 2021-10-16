@@ -19,7 +19,7 @@ Finally, you will always run this script with the following command:
 ```node mint.js```
 
 ## Python script to analyze ids available for minting
-Files you need to update:
+This script was only tested in Python 3.8. The files you need to update are:
 * The contract ABI: ```contract_abi.json```
 * Info about your private keys: ```.env```
 * The contract address in ```nft_availability_sniper.py```

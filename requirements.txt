@@ -1,0 +1,4 @@
+asyncio
+json
+web3
+python-dotenv
